@@ -1,19 +1,11 @@
-import { View, Text, StyleSheet, Pressable} from "react-native";
-import { signOut } from "firebase/auth";
-import {auth} from '../firebase';
+import { View, Text, StyleSheet} from "react-native";
 
+const Home = (): JSX.Element => 
 
-const Home = (): JSX.Element => {
-
-const authSignoutUser = () => async () => {
-  await   auth.signOut();
-};
+{
   return (
   <View style={s.container}>
   <Text style={s.text}>You are logged IN</Text>
-  <Pressable onPress={authSignoutUser}>
-    <Text style={s.text}>Exit</Text>
-  </Pressable>
 </View>
 )
 }
